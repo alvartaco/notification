@@ -33,7 +33,7 @@ public class NotificationController {
         log.info("#NOTIFICATIONS - public String list(Model model)");
         List<NotificationDisplayDTO> notificationDisplayDTOS = notificationService.getAllNotificationsDisplayDTOsLiFo();
         model.addAttribute("displayTable", (notificationDisplayDTOS.isEmpty() ? "none" : "block"));
-        model.addAttribute("rows", notificationService.getAllNotificationsDisplayDTOsLiFo());
+        model.addAttribute("rows", notificationDisplayDTOS);
         return "notifications/index";
     }
 
